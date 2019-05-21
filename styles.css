@@ -60,12 +60,13 @@ body p {
     grid-template-areas:
         "navbar"
         "intro"
-        "content";
+        "content1"
+        "content2"
+        "content3";
     grid-template-columns: lfr;
-    grid-template-rows: 150px 800px;
+    grid-template-rows: 150px 800px auto auto auto;
 }
 .content {
-    grid-area: content;
     display: grid;
     grid-template-areas:
         "expo"
@@ -73,6 +74,14 @@ body p {
     max-width: 960px;
     margin: 0 auto;
     text-align: center;
+}
+#content1 {
+    grid-area: content1;
+}
+#content2 {
+    grid-area: content2;
+}#content3 {
+    grid-area: content3;
 }
 .expo {
     grid-area: expo;

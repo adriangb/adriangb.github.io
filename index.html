@@ -6,14 +6,14 @@
     <link rel="stylesheet" href="normalize.css" type="text/css">
 </head>
 <body>
-        <a href="#nav" onclick="topFunction()" id="upButton" class="upButton" title="Go to top">^</a>
+    <a href="#nav" onclick="topFunction()" id="upButton" class="upButton" title="Go to top">^</a>
     <div class="container">
         <div class="navbar" id="nav">
             <nav>
                 <ul>
-                    <li><a href="#">Mat Sci</a></li>
+                    <li><a href="#MatSci">Mat Sci</a></li>
                     <li><a href="#Code">Code</a></li>
-                    <li><a href="#">Personal</a></li>
+                    <li><a href="#Personal">Personal</a></li>
                 </ul>
             </nav>
         </div>
@@ -30,7 +30,7 @@
                 </div>
             </section>
         </div>
-        <div class="content">
+        <div class="content" id="content1">
                     <div class="expo" id="Code">
                         <h1>Code</h1>
                             <p>
@@ -74,12 +74,99 @@
                             </a>
                         </div>
                     </div>
+        </div>
+        <div class="content" id="content2">
+                <div class="expo" id="MatSci">
+                    <h1>Mat Sci</h1>
+                        <p>
+                            Lorem ipsum dolor amet.
+                            <br>
+                            <br>
+                            Lorem ipsum dolor amet.
+                        </p>
+                    <a class="action-btn" href="#">G Scholar</a>
                 </div>
-            </div>
+                <div class="gallery">
+                    <div class="gallery-col">
+                        <a  target="_blank" href="http://example.com">
+                            <figure class="gallery-fig">
+                                <img src="images/Code/Arduino.png">
+                                <figcaption class="caption">Using ML for heartrate waveform analysis.</figcaption>
+                            </figure>
+                        </a>
+                        <a target="_blank" href="https://github.com/adriangb/zillow_scrapper">
+                            <figure class="gallery-fig">
+                                <img src="images/Code/recaptcha.png">
+                                <figcaption class="caption">Passing reCAPTCHA using AHK.</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="gallery-col">
+                        <a  target="_blank" href="http://example.com">
+                            <figure class="gallery-fig">
+                                <img src="images/Code/speech_rec.png">
+                                <figcaption class="caption">Speech recognition to solve a $37Bn problem.</figcaption>
+                            </figure>
+                        </a>
+                        <a href="#nav" onclick="recursion()">
+                            <figure class="gallery-fig">
+                                <img src="images/Code/screenshot.png">
+                                <figcaption class="caption">This website: made in HTML5 & CSS using flexbox!</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+        </div>
+        <div class="content" id="content3">
+                <div class="expo" id="Personal">
+                    <h1>Personal</h1>
+                        <p>
+                            Lorem ipsum dolor amet.
+                            <br>
+                            <br>
+                            Lorem ipsum dolor amet.
+                        </p>
+                    <a class="action-btn" href="https://github.com/adriangb">Github</a>
+                </div>
+                <div class="gallery">
+                    <div class="gallery-col">
+                        <a  target="_blank" href="http://example.com">
+                            <figure class="gallery-fig">
+                                <img src="images/Code/Arduino.png">
+                                <figcaption class="caption">Using ML for heartrate waveform analysis.</figcaption>
+                            </figure>
+                        </a>
+                        <a target="_blank" href="https://github.com/adriangb/zillow_scrapper">
+                            <figure class="gallery-fig">
+                                <img src="images/Code/recaptcha.png">
+                                <figcaption class="caption">Passing reCAPTCHA using AHK.</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="gallery-col">
+                        <a  target="_blank" href="http://example.com">
+                            <figure class="gallery-fig">
+                                <img src="images/Code/speech_rec.png">
+                                <figcaption class="caption">Speech recognition to solve a $37Bn problem.</figcaption>
+                            </figure>
+                        </a>
+                        <a href="#nav" onclick="recursion()">
+                            <figure class="gallery-fig">
+                                <img src="images/Code/screenshot.png">
+                                <figcaption class="caption">This website: made in HTML5 & CSS using flexbox!</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+        </div>
     </div>
     <script>
     function recursion() {
+        old_trans = document.getElementById("upButton").style.transition;
+        document.getElementById("upButton").style.transition = "none";
+        document.getElementById("upButton").style.visibility = "hidden";
         alert("Recursion error: can't link back to self!");
+        document.getElementById("upButton").style.transition = old_trans;
     }
 
     // When the user scrolls down 20px from the top of the document, show the button
@@ -96,7 +183,7 @@
     // When the user clicks on the button, scroll to the top of the document
     function topFunction() {
         old_trans = document.getElementById("upButton").style.transition;
-        document.getElementById("upButton").style.transition = "0s";
+        document.getElementById("upButton").style.transition = "none";
         document.getElementById("upButton").style.visibility = "hidden";
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
