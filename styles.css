@@ -31,7 +31,7 @@ body p {
         "intro"
         "content";
     grid-template-columns: lfr;
-    grid-template-rows: 50px 800px;
+    grid-template-rows: 150px 800px;
 }
 .content {
     grid-area: content;
@@ -72,7 +72,7 @@ body p {
 }
 
 nav ul{
-    margin: 0;
+    margin: 2em;
     padding: 0;
     display: flex;
     justify-content: space-around;
@@ -80,11 +80,11 @@ nav ul{
   }
 nav li{
     list-style: none;
-    padding: 10px 0;
+    font-size: 2em;
   }
 nav li a{
     color: white;
-    font-weight: 700;
+    font-weight: bold;
     opacity: 0.75;
     text-decoration: none;
     transition: 0.3s;
@@ -127,6 +127,16 @@ nav li a:hover {
 }
 
 @media (min-width: 1040px) {
+    .container {
+        font-size: 1.5em;
+        grid-template-rows: 75px 800px;
+    }
+    nav ul {
+        margin: .5em;
+    }
+    nav li{
+        font-size: 1.5em;
+      }
     .content {
         grid-template-areas:
             "expo gallery";
@@ -135,7 +145,6 @@ nav li a:hover {
     }
     .gallery {
         align-content: right;
-        margin-left: 50px;
     }
     .gallery-fig:hover {
         transform: scale(1.15);
