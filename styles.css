@@ -18,8 +18,8 @@ body p {
     background: #FF6F00;
     justify-content: center;
 }
-.content {
-    grid-area: content;
+.intro {
+    grid-area: intro;
 }
 .container {
     font-size: 1.5em;
@@ -28,14 +28,49 @@ body p {
     display: grid;
     grid-template-areas:
         "navbar"
+        "intro"
         "content";
     grid-template-columns: lfr;
     grid-template-rows: 50px 800px;
 }
-.content,
+.content {
+    grid-area: content;
+    display: grid;
+    grid-template-areas:
+        "expo"
+        "gallery";
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+.expo {
+    grid-area: expo;
+}
+.gallery {
+    grid-area: gallery;
+    display: flex;
+}
+.gallery-col {
+    flex: 1;
+    align-content: center;
+}
+.gallery-fig img {
+    height: 50%;
+}
+.gallery-fig figcaption {
+    vertical-align: bottom;
+    background: white;
+}
+.gallery a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.intro,
 .header {
     padding: 1em;
 }
+
 nav ul{
     margin: 0;
     padding: 0;
@@ -76,12 +111,6 @@ nav li a:hover {
     line-height: 1.8em;
     color: #3D3D3D
 }
-.hero hr {
-    border: 2px solid #FF6F00;
-    border-radius: 1px;
-    width: 75%;
-    justify-self: left;
-}
 .action-btn {
     display: inline-block;
     text-decoration: none;
@@ -98,6 +127,19 @@ nav li a:hover {
 }
 
 @media (min-width: 1040px) {
+    .content {
+        grid-template-areas:
+            "expo gallery";
+        text-align: left;
+        margin: 2em auto;
+    }
+    .gallery {
+        align-content: right;
+        margin-left: 50px;
+    }
+    .gallery-fig:hover {
+        transform: scale(1.15);
+    }
     .hero {
         text-align: left;
         margin: 2em auto;
