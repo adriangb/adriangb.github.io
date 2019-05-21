@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins|Roboto");
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url(images/background.png);
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center top;
+}
+body h1 {
+    font-family: 'Poppins', sans-serif;
+}
+body p {
+    font-family: 'Roboto', sans-serif;
+}
+.navbar {
+    grid-area: navbar;
+    background: #FF6F00;
+    justify-content: center;
+}
+.content {
+    grid-area: content;
+}
+.container {
+    font-size: 1.5em;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+        "navbar"
+        "content";
+    grid-template-columns: lfr;
+    grid-template-rows: 50px 800px;
+}
+.content,
+.header {
+    padding: 1em;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+  }
+nav li{
+    list-style: none;
+    padding: 10px 0;
+  }
+nav li a{
+    color: white;
+    font-weight: 700;
+    opacity: 0.75;
+    text-decoration: none;
+    transition: 0.3s;
+}
+nav li a:hover {
+    opacity: 1;
+}
+
+.hero {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+.hero img {
+    width: 200px;
+}
+.hero h1 {
+    font-size: 2em;
+    font-weight:300;
+    color: #3D3D3D
+}
+.hero p {
+    font-weight: 300;
+    line-height: 1.8em;
+    color: #3D3D3D
+}
+.hero hr {
+    border: 2px solid #FF6F00;
+    border-radius: 1px;
+    width: 75%;
+    justify-self: left;
+}
+.action-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    background: #FF6F00;
+    padding: 0.5em 2em;
+    border-radius: 40px;
+    margin: 1em 0;
+    transition: 0.3s;
+}
+.action-btn:hover {
+    box-shadow: 0 10px 50px rgba(188, 197, 216, 1)
+}
+
+@media (min-width: 1040px) {
+    .hero {
+        text-align: left;
+        margin: 2em auto;
+    }
+    .hero img {
+        width: 250px;
+        float: right;
+    }
+    .hero h1 {
+        font-size: 3em;
+    }
+    .hero p {
+        width: 60%;
+    }
+}
