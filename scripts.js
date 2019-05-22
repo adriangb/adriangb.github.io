@@ -9,7 +9,12 @@ function recursionJoke() {
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
+// For refresh while scrolling down
+window.onload = function() {scrollFunction()};
+
 function scrollFunction() {
+    window.location.hash = "" ;     // Removes anchors from URL after it is clicked.
+
     if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
     document.getElementById("upButton").style.visibility = "visible";
     } else {
@@ -29,3 +34,13 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
     document.getElementById("upButton").style.transition = old_trans;
 }
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});

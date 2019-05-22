@@ -19,6 +19,7 @@ body {
     background-attachment: fixed;
     background-size: 100%;
     opacity: 1;
+    z-index: -1;
 }
 body h1 {
     font-family: 'Poppins', sans-serif;
@@ -31,17 +32,6 @@ body p {
     background: #FF6F00;
     justify-content: center;
     z-index: 99;
-}
-.action-btn {
-    display: inline-block;
-    text-decoration: none;
-    color: white;
-    font-weight: 700;
-    background: #FF6F00;
-    padding: 0.5em 2em;
-    border-radius: 40px;
-    margin: 1em 0;
-    transition: 0.3s;
 }
 .upButton {
     visibility: hidden;
@@ -103,6 +93,10 @@ body p {
 .expo {
     grid-area: expo;
 }
+.expo ul {
+    padding-left: 6em;
+    text-align: left;
+}
 .gallery {
     grid-area: gallery;
     display: flex;
@@ -111,12 +105,16 @@ body p {
     flex: 1;
     align-content: center;
 }
+.gallery-fig {
+    text-align: center;
+}
 .gallery-fig img {
-    height: 50%;
+    height: 10em;
+    width: auto;
 }
 .gallery-fig figcaption {
     vertical-align: bottom;
-    background: white;
+    height: 5em;
 }
 .gallery a {
     text-decoration: none;
@@ -199,9 +197,10 @@ nav li a:hover {
             "expo gallery";
         text-align: left;
         margin: 2em auto;
+        grid-template-columns: 350px auto;
     }
     .gallery {
-        align-content: right;
+        align-content: center;
     }
     .gallery-fig:hover {
         transform: scale(1.15);
