@@ -3,9 +3,9 @@
 <head>
 <title>Adrian Garcia Badaracco - Portfolio</title>
     <link rel="stylesheet" href="styles.css" type="text/css">
-    <link rel="stylesheet" href="normalize.css" type="text/css">
 </head>
 <body>
+    <div id="background"></div>
     <a href="#nav" onclick="topFunction()" id="upButton" class="upButton" title="Go to top">^</a>
     <div class="container">
         <div class="navbar" id="nav">
@@ -66,7 +66,7 @@
                                     <figcaption class="caption">Speech recognition to solve a $37Bn problem.</figcaption>
                                 </figure>
                             </a>
-                            <a href="#nav" onclick="recursion()">
+                            <a href="#nav" onclick="recursionJoke()">
                                 <figure class="gallery-fig">
                                     <img src="images/Code/screenshot.png">
                                     <figcaption class="caption">This website: made in HTML5 & CSS using flexbox!</figcaption>
@@ -160,35 +160,6 @@
                 </div>
         </div>
     </div>
-    <script>
-    function recursion() {
-        old_trans = document.getElementById("upButton").style.transition;
-        document.getElementById("upButton").style.transition = "none";
-        document.getElementById("upButton").style.visibility = "hidden";
-        alert("Recursion error: can't link back to self!");
-        document.getElementById("upButton").style.transition = old_trans;
-    }
-
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction() {
-        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-        document.getElementById("upButton").style.visibility = "visible";
-        } else {
-        document.getElementById("upButton").style.visibility = "hidden";
-        }
-    }
-
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-        old_trans = document.getElementById("upButton").style.transition;
-        document.getElementById("upButton").style.transition = "none";
-        document.getElementById("upButton").style.visibility = "hidden";
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-        document.getElementById("upButton").style.transition = old_trans;
-    }
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
