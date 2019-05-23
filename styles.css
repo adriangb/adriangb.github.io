@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins|Roboto");
 html {
     scroll-behavior: smooth;
+    font-size: 20px;
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -40,11 +41,9 @@ body p {
     background: #FF6F00;
     border-radius: 50%;
     margin: 0 0;
-    transition: 0.3s;
     position: fixed;
-    top: 20px;
-    left: 30px;
-    padding: 5px 5px 5px 5px;
+    top: 1rem;
+    left: 2rem;
     z-index: 97;
   }
 
@@ -56,13 +55,12 @@ body p {
 }
 
 .upButton:hover {
-    box-shadow: 0 10px 50px rgba(188, 197, 216, 1)
+    box-shadow: 0 .5rem 2rem rgba(188, 197, 216, 1)
 }
 .intro {
     grid-area: intro;
 }
 .container {
-    font-size: 1.5em;
     width: 100%;
     height: 100vh;
     display: grid;
@@ -73,16 +71,17 @@ body p {
         "content2"
         "content3";
     grid-template-columns: lfr;
-    grid-template-rows: 150px 800px auto auto auto;
+    grid-template-rows: 4rem 35rem auto auto auto;
 }
 .content {
     display: grid;
     grid-template-areas:
         "expo"
         "gallery";
-    max-width: 960px;
+    max-width: 40em;
     margin: 0 auto;
     text-align: center;
+    padding-bottom: 7rem;
 }
 #content1 {
     grid-area: content1;
@@ -102,10 +101,11 @@ body p {
 .gallery {
     grid-area: gallery;
     display: flex;
+    padding-right: 1rem;
 }
 .gallery-col {
     flex: 1;
-    align-content: center;
+    width: 25%;
 }
 .gallery-fig {
     text-align: center;
@@ -136,45 +136,28 @@ nav button {
     opacity: 0.75;
     text-decoration: none;
     transition: 0.3s;
+    font-size: 2rem;
+    cursor: pointer;
 }
 nav button:hover {
     opacity: 1;
+    cursor: pointer;
 }
-nav button:active  {
-    background:none;
-    border:none;
-    outline:none
-}
-nav ul{
-    margin: 2em;
-    padding: 0;
+nav {
+    width: 100%;
     display: flex;
     justify-content: space-around;
-    width: 90%;
-  }
-nav li{
-    list-style: none;
-    font-size: 2em;
-    cursor: pointer;
-  }
-nav li a{
-    color: white;
-    font-weight: bold;
-    opacity: 0.75;
-    text-decoration: none;
-    transition: 0.3s;
-}
-nav li a:hover {
-    opacity: 1;
+    align-content: stretch;
+    padding-top: .5rem;
 }
 
 .hero {
-    max-width: 960px;
+    max-width: 40em;
     margin: 0 auto;
     text-align: center;
 }
 .hero img {
-    width: 200px;
+    width: 12em;
 }
 .hero h1 {
     font-size: 2em;
@@ -198,13 +181,12 @@ nav li a:hover {
     transition: 0.3s;
 }
 .action-btn:hover {
-    box-shadow: 0 10px 50px rgba(188, 197, 216, 1)
+    box-shadow: 0 .5rem 2rem rgba(188, 197, 216, 1)
 }
 
 @media (min-width: 75em) {
     .container {
         font-size: 1.5em;
-        grid-template-rows: 75px 800px;
     }
     nav ul {
         margin: .5em;
@@ -216,11 +198,8 @@ nav li a:hover {
         grid-template-areas:
             "expo gallery";
         text-align: left;
-        margin: 2em auto;
-        grid-template-columns: 350px auto;
-    }
-    .gallery {
-        align-content: center;
+        grid-template-columns: 40% 50rem;
+        padding: 6rem 0.2rem 2rem 0;
     }
     .gallery-fig:hover {
         transform: scale(1.15);
@@ -230,7 +209,7 @@ nav li a:hover {
         margin: 2em auto;
     }
     .hero img {
-        width: 250px;
+        width: 12em;
         float: right;
     }
     .hero h1 {
@@ -238,9 +217,5 @@ nav li a:hover {
     }
     .hero p {
         width: 60%;
-    }
-    .expo ul {
-        padding-left: 2em;
-        text-align: left;
     }
 }
