@@ -81,7 +81,7 @@ body p {
     max-width: 40em;
     margin: 0 auto;
     text-align: center;
-    padding-bottom: 7rem;
+    padding-bottom: 4rem;
 }
 #content1 {
     grid-area: content1;
@@ -123,8 +123,7 @@ body p {
     color: inherit;
 }
 
-.intro,
-.header {
+.intro {
     padding: 1em;
 }
 nav button {
@@ -185,6 +184,9 @@ nav {
 }
 
 @media (min-width: 75em) {
+    html {
+        font-size: 14px;
+    }
     .container {
         font-size: 1.5em;
     }
