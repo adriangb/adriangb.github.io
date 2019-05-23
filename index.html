@@ -6,14 +6,16 @@
 </head>
 <body>
     <div id="background"></div>
-    <a href="#nav" onclick="topFunction()" id="upButton" class="upButton" title="Go to top">^</a>
+    <a href="#nav" onclick="topFunction()" id="upButton" class="upButton" title="Go to top">
+        <img src="images/assets/nav_up.png">
+    </a>
     <div class="container">
         <div class="navbar" id="nav">
             <nav>
                 <ul>
-                    <li><a href="#MatSci">Mat Sci</a></li>
-                    <li><a href="#Code">Code</a></li>
-                    <li><a href="#Personal">Personal</a></li>
+                    <li><button onclick="document.getElementById('Code').scrollIntoView()">Mat Sci</button></li>
+                    <li><button onclick="document.getElementById('MatSci').scrollIntoView()">Code</button></li>
+                    <li><button onclick="document.getElementById('Personal').scrollIntoView()">Personal</button></li>
                 </ul>
             </nav>
         </div>
@@ -83,7 +85,9 @@
                     <h1>Mat Sci</h1>
                         <p>
                             I have 4 years of research experience in materials science as well as a summer internship at Applied Materials.
-                            While at Applied, I designed and wrote MATLAB scrips and GUI for automated wafer map analysis, including:
+                            <br>
+                            <br>
+                            While at Applied, I designed and wrote MATLAB scripts and GUI for automated wafer map analysis, including:
                             <ul style="list-style-type:circle;">
                                 <li>Automated choice of statistical analysis (reduce errors).</li>
                                 <li>Automated wafer map math (ex: etch rate).</li>
@@ -129,7 +133,6 @@
                         <p>
                             I enjoy improving every day things. I'm obssessive about good user design, and can talk for hours about how I would redesign everyday things.
                         </p>
-                    <a class="action-btn" href="https://github.com/adriangb">Github</a>
                 </div>
                 <div class="gallery">
                     <div class="gallery-col">

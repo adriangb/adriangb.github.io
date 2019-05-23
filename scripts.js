@@ -4,7 +4,7 @@ function recursionJoke() {
     document.getElementById("upButton").style.visibility = "hidden";
     alert("Recursion error: can't link back to self!");
     document.getElementById("upButton").style.transition = old_trans;
-}
+};
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
@@ -13,8 +13,6 @@ window.onscroll = function() {scrollFunction()};
 window.onload = function() {scrollFunction()};
 
 function scrollFunction() {
-    window.location.hash = "" ;     // Removes anchors from URL after it is clicked.
-
     if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
     document.getElementById("upButton").style.visibility = "visible";
     } else {
@@ -23,7 +21,7 @@ function scrollFunction() {
     fade_at = 800;  // Scroll point at which background dissapears, in px
     background_opacity = Math.max((fade_at - Math.max(document.body.scrollTop, document.documentElement.scrollTop)) / fade_at, 0);
     document.getElementById("background").style.opacity = background_opacity
-}
+};
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
@@ -33,14 +31,4 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
     document.getElementById("upButton").style.transition = old_trans;
-}
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+};
