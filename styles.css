@@ -5,12 +5,12 @@
   }
 html {
     scroll-behavior: smooth;
-    font-size: 20px;
+    font-size: 25px;
 }
 body {
     font-family: 'Roboto', sans-serif;
     margin: 3rem 0 0 0;
-    font-size: 1rem;
+    font-size: 1em;
     line-height: 1.5;
     color: #000;
     font-weight: 100;
@@ -113,7 +113,7 @@ nav > ul > li {
     margin-left: 0;
     float: left;
     margin-left: 2rem;
-    font-size: 1.15rem;
+    font-size: 1.15em;
 }
 nav > .logo {
     visibility: hidden;
@@ -233,7 +233,7 @@ ul.menu-left:before {
 }
 .gallery-fig {
     text-align: center;
-    padding: 1rem 1rem 1rem 1rem;
+    padding: 2rem 1rem 2rem 1rem;
 }
 .gallery-fig img {
     height: 10em;
@@ -253,11 +253,11 @@ ul.menu-left:before {
 
 .gallery-fig > figcaption > h1
 {
-    font-size: 1rem;
+    font-size: 1em;
 }
 
 .gallery-fig > figcaption > p{
-    font-size: .8rem;
+    font-size: .8em;
 }
 
 .gallery a {
@@ -301,44 +301,17 @@ ul.menu-left:before {
     box-shadow: 0 .5rem 2rem rgba(188, 197, 216, 1)
 }
 
-@media (max-width: 50em) {
-    .intro-images {
-        opacity: 0;
-    }
-}
-
-@media (min-width: 75em) {
-    .intro-images > #img1 {
-        max-width: 25%;
-        height: auto;
-        position: absolute;
-        top: 45%;
-        left: 0;
-    }
-    .intro-images > #img2 {
-        max-width: 25%;
-        height: auto;
-        position: absolute;
-        top: 35%;
-        right: 0;
-    }
-    .intro-images > #img3 {
-        max-width: 25%;
-        height: auto;
-        position: absolute;
-        top: 55%;
-        right: 37.5%;
+@media (min-width: 1500px) {
+    html {
+        font-size: 10px;
     }
     nav > .logo {
         float: none;
         margin-right: 1rem;
-        font-size: 2rem;
+        font-size: 2em;
         font-weight: 500;
         color: black;
         visibility: visible;
-    }
-    html {
-        font-size: 14px;
     }
     .container {
         font-size: 1.5em;
