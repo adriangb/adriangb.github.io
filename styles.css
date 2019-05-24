@@ -189,34 +189,9 @@ ul.menu-left:before {
     display: grid;
     grid-template-areas:
         "intro-text"
-        "intro-images"
         "intro-nav";
-    grid-template-rows: 40% 40% 20%;
-}
-.intro-images {
-    opacity: 0.25;
-}
-
-.intro-images > #img1 {
-    max-width: 25%;
-    height: auto;
-    position: absolute;
-    top: 15%;
-    left: 0;
-}
-.intro-images > #img2 {
-    max-width: 25%;
-    height: auto;
-    position: absolute;
-    top: 15%;
-    right: 0;
-}
-.intro-images > #img3 {
-    max-width: 25%;
-    height: auto;
-    position: absolute;
-    top: 55%;
-    right: 37.5%;
+    grid-template-rows: 70% 20%;
+    align-items: center;
 }
 .content {
     display: grid;
@@ -290,10 +265,8 @@ ul.menu-left:before {
     color: inherit;
 }
 
-.intro {
-    padding: 4rem;
-}
 .hero {
+    padding-top: 3rem;
     max-width: 40em;
     margin: 0 auto;
     text-align: center;
