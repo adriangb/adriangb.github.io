@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins|Roboto");
+:root {
+    /*--accent-color: #FF6F00;*/
+    --accent-color: #5a5cd8;
+  }
 html {
     scroll-behavior: smooth;
     font-size: 20px;
@@ -10,17 +14,18 @@ body {
     background-repeat:   no-repeat;
     background-position: center top;
     background-attachment: fixed;*/
+    margin: 0;
 }
 #background {
-    position: fixed;
-    top: 0;
+    position: absolute;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: url(images/background.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100%;
+    right: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height:35em;
+    width: auto;
+    height: auto;
     opacity: 1;
     z-index: -1;
 }
@@ -32,13 +37,14 @@ body p {
 }
 .navbar {
     grid-area: navbar;
-    background: #FF6F00;
+    background: var(--accent-color);
     justify-content: center;
     z-index: 99;
+    padding: 0;
 }
 .upButton {
     visibility: hidden;
-    background: #FF6F00;
+    background: var(--accent-color);
     border-radius: 50%;
     margin: 0 0;
     position: fixed;
@@ -157,6 +163,8 @@ nav {
 }
 .hero img {
     width: 12em;
+    border-radius: 50%;
+    box-shadow: 0rem 0rem 1rem 0.1rem rgb(100, 102, 107)
 }
 .hero h1 {
     font-size: 2em;
@@ -173,7 +181,7 @@ nav {
     text-decoration: none;
     color: white;
     font-weight: 700;
-    background: #FF6F00;
+    background: var(--accent-color);
     padding: 0.5em 2em;
     border-radius: 40px;
     margin: 1em 0;
