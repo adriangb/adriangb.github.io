@@ -6,29 +6,49 @@ function recursionJoke() {
     document.getElementById("upButton").style.transition = old_trans;
 };
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+// LINKS TO ANCHORS
+$('a[href^="#"]').on('click', function(event) {
 
-// For refresh while scrolling down
-window.onload = function() {scrollFunction()};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-    document.getElementById("upButton").style.visibility = "visible";
-    } else {
-    document.getElementById("upButton").style.visibility = "hidden";
+    var $target = $(this.getAttribute('href'));
+    if($target.length) {
+      event.preventDefault();
+      $('html, body').stop().animate({
+        scrollTop: $target.offset().top
+      }, 750, 'easeInOutQuad');
     }
-    fade_at = 800;  // Scroll point at which background dissapears, in px
-    background_opacity = Math.max((fade_at - Math.max(document.body.scrollTop, document.documentElement.scrollTop)) / fade_at, 0);
-    document.getElementById("background").style.opacity = background_opacity
-};
+  });
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    old_trans = document.getElementById("upButton").style.transition;
-    document.getElementById("upButton").style.transition = "none";
-    document.getElementById("upButton").style.visibility = "hidden";
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-    document.getElementById("upButton").style.transition = old_trans;
-};
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+  }, 250);
+
+function hasScrolled() {
+    var st = Math.max(document.body.scrollTop,  document.documentElement.scrollTop);
+    // Check that scroll is more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    // If so, hide navbar
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('header').removeClass('show-nav').addClass('hide-nav');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('header').removeClass('hide-nav').addClass('show-nav');
+        }
+    }
+    lastScrollTop = st;
+}

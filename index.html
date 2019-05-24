@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="scripts.js"></script>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <title>Adrian Garcia Badaracco - Portfolio</title>
     <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
-<body>
-    <a href="#nav" onclick="topFunction()" id="upButton" class="upButton" title="Go to top">
-        <img src="images/assets/nav_up.png">
+<header>
+    <nav id="navigation">
+    <a href="#" class="logo">Adrian Garcia Badaracco</a>
     </a>
+        <ul class="menu-left">
+        <li><a href="#About">ABOUT</a></li>
+        <li><a href="#Code">CODE</a></li>
+        <li><a href="#MatSci">MAT SCI</a></li>
+        <li><a href="#Personal">PERSONAL</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
     <div class="container">
-        <div class="navbar" id="nav">
-            <nav>
-                <button onclick="document.getElementById('Code').scrollIntoView()">CODE</button>
-                <button onclick="document.getElementById('MatSci').scrollIntoView()">MAT SCI</button>
-                <button onclick="document.getElementById('Personal').scrollIntoView()">PERSONAL</button>
-            </nav>
-        </div>
-        <div class="intro">
+        <div class="intro" id="About">
             <section class="hero">
                 <img src="images/headshot.png" />
                 <div class="hero-intro">
@@ -27,6 +31,14 @@
                         to firmware.</p>
                     <a class="action-btn" href="https://www.linkedin.com/in/adrian-garcia-badaracco/">Visit My LinkedIn</a>
                 </div>
+            </section>
+            <section class="intro-images">
+                <img id="img1" src="images/Background/DiscFig4.png">
+                <img id="img2" src="images/Background/Shells.png">
+                <img id="img3"src="images/Background/waveform.png">
+            </section>
+            <section class="down-button">
+                <a href="#Code"><img src="images/assets/nav-down.svg">See More</a>
             </section>
         </div>
         <div class="content" id="content1">
@@ -169,6 +181,5 @@
                 </div>
         </div>
     </div>
-    <script src="scripts.js"></script>
 </body>
 </html>
