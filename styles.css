@@ -105,6 +105,7 @@ body p {
 .gallery-fig img {
     height: 10em;
     width: auto;
+    border-radius: 5%;
 }
 .gallery-fig figcaption {
     vertical-align: bottom;
