@@ -140,10 +140,13 @@ ul.menu-left:before {
     clear: both;
 }
 .down-button {
-    max-width: 40em;
+    max-width: 20%;
     margin: 0 auto;
     text-align: center;
     grid-area: intro-nav;
+}
+.down-button span {
+    display: block;
 }
 .down-button a {
 
@@ -242,16 +245,17 @@ ul.menu-left:before {
     flex: 1;
     margin: 0 1em;
 }
+
 .gallery-fig {
     text-align: center;
-    margin: 5em 0;
+    margin: 0 0 5em 0;
     width: 100%;
 }
 .gallery-fig img {
     width:auto;
-    height:auto;
-    max-width:100%;
-    max-height:10em;
+    height:10em;
+    max-width: 100%;
+    max-height: auto;
     border-radius: 5%;
     padding-bottom: 1em;
 }
@@ -305,7 +309,7 @@ ul.menu-left:before {
         font-size: 1.5em;
     }
     nav > ul > li {
-        margin-left: 1rem;
+        margin-left: 6rem;
         line-height: 3.5rem;
     }
     .content {
