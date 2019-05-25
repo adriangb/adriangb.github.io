@@ -76,6 +76,7 @@ p {
 }
 
 nav {
+    margin: 1rem 1rem 1rem 1rem;
     grid-area: nav;
     background: rgba(255, 255, 255, .92);
     transition: background .3s,
@@ -250,7 +251,7 @@ ul.menu-left:before {
     width:auto;
     height:auto;
     max-width:100%;
-    max-height:15rem;
+    max-height:100%;
     border-radius: 5%;
     padding-bottom: 1em;
 }
@@ -288,7 +289,7 @@ ul.menu-left:before {
     box-shadow: 0 .5rem 2rem rgba(188, 197, 216, 1)
 }
 
-@media screen and (min-device-width: 960px), only screen and (orientation: landscape) {
+@media screen and (orientation: landscape), (min-width: 960px) {
     html {
         font-size: 14px;
     }
