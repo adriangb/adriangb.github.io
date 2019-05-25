@@ -5,14 +5,12 @@
   }
 html {
     scroll-behavior: smooth;
-    font-size: 25px;
+    font-size: 20px;
 }
 body {
-    margin-top: 0;
+    margin: 0;
     font-family: 'Roboto', sans-serif;
-    font-size: 1em;
     color: #000;
-    font-weight: 100;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
     --text-color: #000;
@@ -78,7 +76,6 @@ p {
 }
 
 nav {
-    margin: 1rem 1rem 0 0;
     grid-area: nav;
     background: rgba(255, 255, 255, .92);
     transition: background .3s,
@@ -93,7 +90,7 @@ nav {
 nav > ul{
     list-style: none;
     padding-left: 0;
-    margin: 0;
+    margin: 0 1rem 0 0;
 }
 nav > ul > li {
     margin-left: 0;
@@ -109,7 +106,7 @@ nav a:hover, a:focus {
     color: darken(#000, 20%);
 }
 nav > .logo {
-    visibility: hidden;
+    display: none;
 }
 nav:after {
     content: '';
@@ -163,7 +160,7 @@ ul.menu-left:before {
     opacity: .75;
 }
 .container {
-    padding-right: 3rem;
+    width: 100%;
     height: 100vh;
     display: grid;
     grid-template-areas:
@@ -173,7 +170,7 @@ ul.menu-left:before {
         "content2"
         "content3";
     grid-template-columns: lfr;
-    grid-template-rows: 2rem 100vh auto auto auto;
+    grid-template-rows: 4rem 100vh auto auto auto;
 }
 .intro {
     grid-area: intro;
@@ -185,8 +182,8 @@ ul.menu-left:before {
     align-items: center;
 }
 .hero {
-    max-width: 40em;
-    margin: 0 3rem;
+    max-width: 70%;
+    margin: auto auto;
     text-align: center;
 }
 .hero img {
@@ -207,10 +204,10 @@ ul.menu-left:before {
 }
 .content {
     display: grid;
+    max-width: 90%;
     grid-template-areas:
         "expo"
         "gallery";
-    max-width: 40em;
     margin: 0 auto;
     text-align: center;
     padding-top: 4rem;
@@ -238,30 +235,29 @@ ul.menu-left:before {
     padding-top: 3rem;
     grid-area: gallery;
     display: flex;
-    padding-right: 1rem;
+    width: 100%;
 }
 .gallery-col {
     flex: 1;
-    width: 25%;
+    margin: 0 1em;
 }
 .gallery-fig {
     text-align: center;
-    padding: 2rem 1rem 2rem 1rem;
+    margin: 5em 0;
+    width: 100%;
 }
 .gallery-fig img {
-    height: 10em;
-    width: auto;
+    width:auto;
+    height:auto;
+    max-width:100%;
+    max-height:15rem;
     border-radius: 5%;
+    padding-bottom: 1em;
 }
 .gallery-fig figcaption {
     vertical-align: bottom;
     height: 5em;
     text-align: left;
-}
-
-.gallery-fig > figcaption > h1, p{
-    margin: 0px;
-    padding: 0px;
 }
 
 .gallery-fig > figcaption > h1
@@ -292,19 +288,17 @@ ul.menu-left:before {
     box-shadow: 0 .5rem 2rem rgba(188, 197, 216, 1)
 }
 
-@media
-    only screen and (min-device-width: 1200px),
-    only screen and (orientation: landscape) {
+@media screen and (min-device-width: 960px), only screen and (orientation: landscape) {
     html {
-        font-size: 10px;
+        font-size: 14px;
     }
     nav > .logo {
         float: none;
-        margin-right: 1rem;
-        font-size: 2em;
+        margin-right: 0;
+        font-size: 1.75em;
         font-weight: 500;
         color: black;
-        visibility: visible;
+        display: inline;
     }
     .container {
         font-size: 1.5em;
@@ -317,7 +311,7 @@ ul.menu-left:before {
         grid-template-areas:
             "expo gallery";
         text-align: left;
-        grid-template-columns: 40% 50rem;
+        grid-template-columns: 40% 60%;
     }
     .gallery-fig:hover {
         transform: scale(1.15);
@@ -336,5 +330,8 @@ ul.menu-left:before {
     }
     .hero p {
         width: 60%;
+    }
+    .expo p {
+        margin: auto 0;
     }
 }
