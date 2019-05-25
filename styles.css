@@ -137,8 +137,8 @@ ul.menu-left:before {
     clear: both;
 }
 .down-button {
-    max-width: 20%;
-    margin: 0 auto;
+    max-width: 10%;
+    margin: auto;
     text-align: center;
     grid-area: intro-nav;
 }
@@ -146,7 +146,6 @@ ul.menu-left:before {
     display: block;
 }
 .down-button a {
-
     display: inline-block;
     color: black;
     letter-spacing: .1em;
@@ -171,7 +170,7 @@ ul.menu-left:before {
         "content2"
         "content3";
     grid-template-columns: lfr;
-    grid-template-rows: 4rem 100vh auto auto auto;
+    grid-template-rows: 5% 90% auto auto auto;
 }
 .intro {
     grid-area: intro;
@@ -179,7 +178,7 @@ ul.menu-left:before {
     grid-template-areas:
         "intro-text"
         "intro-nav";
-    grid-template-rows: 70% 20% 10%;
+    grid-template-rows: 85% 15%;
     align-items: center;
 }
 .hero {
