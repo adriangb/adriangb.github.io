@@ -1,8 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins|Roboto");
-:root {
-    /*--accent-color: #FF6F00;*/
-    --accent-color: #5a5cd8;
-  }
+@import "https://fonts.googleapis.com/css?family=Poppins|Roboto";
+
 html {
     scroll-behavior: smooth;
     font-size: 20px;
@@ -10,10 +7,10 @@ html {
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    color: #000;
+    color: black;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
-    --text-color: #000;
+    --text-color: black;
     --accent-color: #5a5cd8;
 }
 h1 {
@@ -25,7 +22,7 @@ p {
 .menu-left a {
     display: inline-block;
     position: relative;
-    padding-bottom: 0px;
+    padding-bottom: 0;
     transition: color .35s ease;
   }
 
@@ -76,7 +73,7 @@ p {
 }
 
 nav {
-    margin: 1rem 1rem 1rem 1rem;
+    margin: 1rem;
     grid-area: nav;
     background: rgba(255, 255, 255, .92);
     transition: background .3s,
@@ -104,7 +101,7 @@ nav a {
     color: rgba(34, 34, 34, .8);
 }
 nav a:hover, a:focus {
-    color: darken(#000, 20%);
+    color: darken(black, 20%);
 }
 nav > .logo {
     display: none;
@@ -151,7 +148,7 @@ ul.menu-left:before {
 .down-button a {
 
     display: inline-block;
-    color: rgb(0, 0, 0);
+    color: black;
     letter-spacing: .1em;
     text-decoration: none;
     transition: opacity .3s;
@@ -187,14 +184,14 @@ ul.menu-left:before {
 }
 .hero {
     max-width: 70%;
-    margin: auto auto;
+    margin: auto;
     text-align: center;
 }
 .hero img {
     width: 12em;
     margin-top: 2rem;
     border-radius: 50%;
-    box-shadow: 0rem 0rem 1rem 0.1rem rgb(100, 102, 107)
+    box-shadow: 0 0 1rem 0.1rem rgb(100, 102, 107)
 }
 .hero h1 {
     font-size: 2em;
