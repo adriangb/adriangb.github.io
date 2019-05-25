@@ -242,17 +242,15 @@ ul.menu-left:before {
     flex: 1;
     margin: 0 1em;
 }
-
 .gallery-fig {
     text-align: center;
     margin: 0 0 5em 0;
     width: 100%;
 }
-.gallery-fig img {
+.gallery-fig > img{
     width:auto;
     height:10em;
     max-width: 100%;
-    max-height: auto;
     border-radius: 5%;
     padding-bottom: 1em;
 }
@@ -261,19 +259,25 @@ ul.menu-left:before {
     height: 5em;
     text-align: left;
 }
-
 .gallery-fig > figcaption > h1
 {
     font-size: 1em;
 }
-
 .gallery-fig > figcaption > p{
     font-size: .8em;
 }
-
 .gallery a {
     text-decoration: none;
     color: inherit;
+}
+.gallery a:hover .main-img {
+    display:none;
+}
+.gallery a:hover .mouseover-img {
+    display: inline;
+}
+.gallery .mouseover-img{
+    display: none;
 }
 .action-btn {
     display: inline-block;
