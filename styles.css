@@ -8,10 +8,9 @@ html {
     font-size: 25px;
 }
 body {
+    margin-top: 0;
     font-family: 'Roboto', sans-serif;
-    margin: 3rem 0 0 0;
     font-size: 1em;
-    line-height: 1.5;
     color: #000;
     font-weight: 100;
     -webkit-font-smoothing: antialiased;
@@ -19,10 +18,10 @@ body {
     --text-color: #000;
     --accent-color: #5a5cd8;
 }
-body h1 {
+h1 {
     font-family: 'Poppins', sans-serif;
 }
-body p {
+p {
     font-family: 'Roboto', sans-serif;
 }
 .menu-left a {
@@ -78,14 +77,10 @@ body p {
     transition: width 0s ease, background .35s ease;
 }
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: .5rem 0;
+nav {
+    margin: 1rem 1rem 0 0;
+    grid-area: nav;
     background: rgba(255, 255, 255, .92);
-    z-index: 3;
     transition: background .3s,
     -webkit-transform .5s cubic-bezier(.694,.048,.335,1);
     transition: transform .5s cubic-bezier(.694,.048,.335,1),background .3s;
@@ -94,16 +89,7 @@ header {
     transform: translateY(0);
     -webkit-transform: translateY(0);
 }
-a {
-    text-decoration: none;
-    color: rgba(34, 34, 34, .8);
-}
-a:hover, a:focus {
-    color: darken(#000, 20%);
-}
-nav {
-    padding: 0px 15px 0px 15px;
-}
+
 nav > ul{
     list-style: none;
     padding-left: 0;
@@ -114,6 +100,13 @@ nav > ul > li {
     float: left;
     margin-left: 2rem;
     font-size: 1.15em;
+}
+nav a {
+    text-decoration: none;
+    color: rgba(34, 34, 34, .8);
+}
+nav a:hover, a:focus {
+    color: darken(#000, 20%);
 }
 nav > .logo {
     visibility: hidden;
@@ -165,24 +158,22 @@ ul.menu-left:before {
 .down-button a:hover {
     opacity: .5;
 }
-.down-button a {
-    padding-top: 60px;
-}
 .down-button a img {
     max-width: 75%;
     opacity: .75;
 }
 .container {
-    width: 100%;
+    padding-right: 3rem;
     height: 100vh;
     display: grid;
     grid-template-areas:
+        "nav"
         "intro"
         "content1"
         "content2"
         "content3";
     grid-template-columns: lfr;
-    grid-template-rows: 100vh auto auto auto;
+    grid-template-rows: 2rem 100vh auto auto auto;
 }
 .intro {
     grid-area: intro;
@@ -190,8 +181,29 @@ ul.menu-left:before {
     grid-template-areas:
         "intro-text"
         "intro-nav";
-    grid-template-rows: 70% 20%;
+    grid-template-rows: 70% 20% 10%;
     align-items: center;
+}
+.hero {
+    max-width: 40em;
+    margin: 0 3rem;
+    text-align: center;
+}
+.hero img {
+    width: 12em;
+    margin-top: 2rem;
+    border-radius: 50%;
+    box-shadow: 0rem 0rem 1rem 0.1rem rgb(100, 102, 107)
+}
+.hero h1 {
+    font-size: 2em;
+    font-weight:300;
+    color: #3D3D3D
+}
+.hero p {
+    font-weight: 300;
+    line-height: 1.8em;
+    color: #3D3D3D;
 }
 .content {
     display: grid;
@@ -201,7 +213,7 @@ ul.menu-left:before {
     max-width: 40em;
     margin: 0 auto;
     text-align: center;
-    padding-bottom: 4rem;
+    padding-top: 4rem;
 }
 #content1 {
     grid-area: content1;
@@ -216,6 +228,7 @@ ul.menu-left:before {
 }
 .expo > p {
     padding-bottom: 2rem;
+    margin: auto 2rem;
 }
 .expo ul {
     text-align: center;
@@ -264,28 +277,6 @@ ul.menu-left:before {
     text-decoration: none;
     color: inherit;
 }
-
-.hero {
-    padding-top: 3rem;
-    max-width: 40em;
-    margin: 0 auto;
-    text-align: center;
-}
-.hero img {
-    width: 12em;
-    border-radius: 50%;
-    box-shadow: 0rem 0rem 1rem 0.1rem rgb(100, 102, 107)
-}
-.hero h1 {
-    font-size: 2em;
-    font-weight:300;
-    color: #3D3D3D
-}
-.hero p {
-    font-weight: 300;
-    line-height: 1.8em;
-    color: #3D3D3D
-}
 .action-btn {
     display: inline-block;
     text-decoration: none;
@@ -301,7 +292,9 @@ ul.menu-left:before {
     box-shadow: 0 .5rem 2rem rgba(188, 197, 216, 1)
 }
 
-@media (min-width: 1500px) {
+@media
+    only screen and (min-device-width: 1200px),
+    only screen and (orientation: landscape) {
     html {
         font-size: 10px;
     }
@@ -325,7 +318,6 @@ ul.menu-left:before {
             "expo gallery";
         text-align: left;
         grid-template-columns: 40% 50rem;
-        padding: 6rem 0.2rem 2rem 0;
     }
     .gallery-fig:hover {
         transform: scale(1.15);
@@ -337,6 +329,7 @@ ul.menu-left:before {
     .hero img {
         width: 12em;
         float: right;
+        margin-top: 5rem;
     }
     .hero h1 {
         font-size: 3em;
