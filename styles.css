@@ -137,7 +137,6 @@ ul.menu-left:before {
     clear: both;
 }
 .down-button {
-    max-width: 10%;
     margin: auto;
     text-align: center;
     grid-area: intro-nav;
@@ -156,7 +155,7 @@ ul.menu-left:before {
     opacity: .5;
 }
 .down-button a img {
-    max-width: 75%;
+    max-width: 10%;
     opacity: .75;
 }
 .container {
@@ -166,11 +165,12 @@ ul.menu-left:before {
     grid-template-areas:
         "nav"
         "intro"
+        "."
         "content1"
         "content2"
         "content3";
     grid-template-columns: lfr;
-    grid-template-rows: 5% 90% auto auto auto;
+    grid-template-rows: 5% 90% 5% auto auto auto;
 }
 .intro {
     grid-area: intro;
@@ -180,6 +180,7 @@ ul.menu-left:before {
         "intro-nav";
     grid-template-rows: 85% 15%;
     align-items: center;
+    margin-top: 3em;
 }
 .hero {
     max-width: 70%;
