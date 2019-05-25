@@ -1,9 +1,6 @@
 function recursionJoke() {
-    old_trans = document.getElementById("upButton").style.transition;
-    document.getElementById("upButton").style.transition = "none";
-    document.getElementById("upButton").style.visibility = "hidden";
     alert("Recursion error: can't link back to self!");
-    document.getElementById("upButton").style.transition = old_trans;
+    document.getElementsByTagName("nav")[0].scrollIntoView();
 };
 
 // LINKS TO ANCHORS
@@ -51,4 +48,4 @@ function hasScrolled() {
         }
     }
     lastScrollTop = st;
-}
+};
