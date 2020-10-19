@@ -1,8 +1,3 @@
-function recursionJoke() {
-    alert("Recursion error: can't link back to self!");
-    document.getElementsByTagName("nav")[0].scrollIntoView();
-};
-
 // LINKS TO ANCHORS
 $('a[href^="#"]').on('click', function(event) {
 
