@@ -1,0 +1,12 @@
+__pycache__
+.DS_Store
+*.pyc
+
+/*
+!/docs
+!/requirements.txt
+!/README.md
+!/.gitignore
+!/mkdocs.yaml
+!/site
+!/.pre-commit-config.yaml

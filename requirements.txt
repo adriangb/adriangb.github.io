@@ -1,0 +1,1 @@
+https://files.scolvin.com/${MKDOCS_TOKEN}/mkdocs-material/mkdocs_material-9.1.5+insiders.4.32.4-py3-none-any.whl
