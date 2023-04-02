@@ -1,4 +1,4 @@
-site_name: Adrian Garcia Badaracco
+site_name: Adrian's Blog
 
 docs_dir: src/
 site_dir: docs/
@@ -19,7 +19,7 @@ markdown_extensions:
 plugins:
   - meta
   - blog:
-      blog_dir: . 
+      blog_dir: .
   - search
   - tags
 
