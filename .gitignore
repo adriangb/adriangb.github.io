@@ -10,3 +10,4 @@ __pycache__
 !/mkdocs.yml
 !/src
 !/.pre-commit-config.yaml
+!/.nojekyll
