@@ -8,5 +8,5 @@ __pycache__
 !/README.md
 !/.gitignore
 !/mkdocs.yml
-!/site
+!/src
 !/.pre-commit-config.yaml

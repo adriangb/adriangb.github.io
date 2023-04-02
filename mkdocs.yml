@@ -1,5 +1,7 @@
 site_name: Adrian Garcia Badaracco
 
+docs_dir: src/
+site_dir: docs/
 nav:
   - Blog:
     - index.md 
