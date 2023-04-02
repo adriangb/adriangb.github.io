@@ -1,5 +1,5 @@
 ---
-draft: true 
+draft: false
 date: 2023-04-02
 categories:
   - postgres
@@ -18,7 +18,7 @@ In AWS, using Redshift and RDS Postgres, we would use Redshift's built in suppor
 
 In GCP we used BigQuery and CloudSQL Postgres. Although BigQuery does support exporting CSV files to GCS, GCP's CloudSQL offering doesn't have a built in GCS extension so you're left to spin up some sort of compute and run a small program to stream data from GCS into Postgres.
 
-Both of these options use Postgre's built in [CSV COPY](https://www.postgresql.org/docs/current/sql-copy.html) functionality.
+Both of these options use Postgres' built in [CSV COPY](https://www.postgresql.org/docs/current/sql-copy.html) functionality.
 
 While both of these solution work, they're really not great. As soon as you store your data in CSV files you loose all type information and metadata. Not to mention that Postgres may not agree with how the tool you use to export the data does delimiters, quotations, null fields, etc. Of course there's knobs on both export and import to tweak these things, but in my experience that's a huge time sink and sometimes unsolvable. Some more thoughts on CSV as a data interchange format in [my last post](./2023-04-01-pandas-arrow.md)
 
@@ -161,7 +161,7 @@ An up to date version of this can be found at the [pgpq] repo.
 
 ## Postgres needs better docs
 
-The hardest part, by far, of writing this library was Postgres' seriously lacking documentation of their binary format. I had to piece it together by reading [Postgres COPY docs](https://www.postgresql.org/docs/current/sql-copy.html), the [rust-postgres](https://github.com/sfackler/rust-postgres) source code and the [py-pgproto](https://github.com/MagicStack/py-pgproto) source code. Postgres' docs and developers tell you to go read the Postgres source code. I just don't see why they can't have a documentation page where they detail the binary format, it really isn't that complicated, it's just poorly documented.
+The hardest part, by far, of writing this library was Postgres' seriously lacking documentation of their binary format. I had to piece it together by reading [Postgres COPY docs](https://www.postgresql.org/docs/current/sql-copy.html), the [rust-postgres](https://github.com/sfackler/rust-postgres) source code and the [py-pgproto](https://github.com/MagicStack/py-pgproto) source code. Postgres' docs and developers tell you to go read the Postgres source code. I just don't see why they can't have a documentation page where they detail the binary format, it really isn't that complicated, it's just poorly documented. Better documentation on the binary protocol would make it a lot easier to write tooling for the Postgres ecosystem.
 
 [arrow-rs]: https://github.com/apache/arrow-rs
 [pgpq]: https://github.com/adriangb/pgpq

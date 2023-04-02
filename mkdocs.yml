@@ -4,7 +4,7 @@ docs_dir: src/
 site_dir: docs/
 nav:
   - Blog:
-    - index.md 
+    - index.md
 
 markdown_extensions:
   - admonition
