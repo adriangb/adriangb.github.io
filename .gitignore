@@ -7,6 +7,6 @@ __pycache__
 !/requirements.txt
 !/README.md
 !/.gitignore
-!/mkdocs.yaml
+!/mkdocs.yml
 !/site
 !/.pre-commit-config.yaml

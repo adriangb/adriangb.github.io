@@ -1,0 +1,25 @@
+site_name: Adrian Garcia Badaracco
+
+nav:
+  - Blog:
+    - index.md 
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+plugins:
+  - meta
+  - blog:
+      blog_dir: . 
+  - search
+  - tags
+
+theme:
+  name: material
